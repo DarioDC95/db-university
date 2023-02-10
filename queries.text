@@ -16,6 +16,7 @@ SELECT *
 FROM `courses` 
 WHERE `cfu` > 10;
 
+
 TERZA query
 
 SELECT * 
