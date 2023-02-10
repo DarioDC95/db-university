@@ -48,3 +48,10 @@ SETTIMA query
 
 SELECT COUNT(*) 
 FROM `departments`;
+
+
+OTTAVA query
+
+SELECT * 
+FROM `teachers` 
+WHERE `phone` IS NULL;
