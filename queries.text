@@ -15,3 +15,12 @@ SECONDA query
 SELECT * 
 FROM `courses` 
 WHERE `cfu` > 10;
+
+TERZA query
+
+SELECT * 
+FROM `students` 
+WHERE (YEAR(CURRENT_DATE) - YEAR(`date_of_birth`) - (DATE_FORMAT(CURRENT_DATE, '%m%d') < DATE_FORMAT(`date_of_birth`, '%m%d'))) > 30;
+
+
+QUARTA query
