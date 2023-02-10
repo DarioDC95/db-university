@@ -11,3 +11,7 @@ WHERE `date_of_birth` LIKE '%1990%';
 
 
 SECONDA query
+
+SELECT * 
+FROM `courses` 
+WHERE `cfu` > 10;
