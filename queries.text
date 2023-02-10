@@ -24,3 +24,7 @@ WHERE (YEAR(CURRENT_DATE) - YEAR(`date_of_birth`) - (DATE_FORMAT(CURRENT_DATE, '
 
 
 QUARTA query
+
+SELECT * 
+FROM `courses` 
+WHERE `period` = 'I semestre' AND `year` = '1';
