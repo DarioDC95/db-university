@@ -42,3 +42,9 @@ SESTA query
 SELECT * 
 FROM `degrees` 
 WHERE `name` LIKE '%Laurea Magistrale%';
+
+
+SETTIMA query
+
+SELECT COUNT(*) 
+FROM `departments`;
