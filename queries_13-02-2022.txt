@@ -1,0 +1,9 @@
+SECOND ROUND OF QUERIES:
+
+FIRST SECTION - "GROUP BY"
+
+PRIMA query
+
+SELECT COUNT(`id`), YEAR(`enrolment_date`)
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`);
