@@ -20,3 +20,10 @@ SELECT AVG(`vote`), `exam_student`.`exam_id`, `exams`.`date`
 FROM `exam_student` 
 JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
 GROUP BY `exam_student`.`exam_id`;
+
+FOURTH query
+
+SELECT COUNT(`degrees`.`id`), `departments`.`name`
+FROM `degrees` 
+JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+GROUP BY `degrees`.`department_id`;
