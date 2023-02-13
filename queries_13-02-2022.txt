@@ -44,3 +44,11 @@ SELECT `degrees`.*, `departments`.`name`
 FROM `degrees` 
 JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 WHERE `departments`.`name` LIKE '%Dipartimento di Neuroscienze%' AND `degrees`.`name` LIKE '%Laurea Magistrale%';
+
+THIRD query
+
+SELECT `courses`.*, `course_teacher`.`teacher_id`, `teachers`.`name`, `teachers`.`surname`
+FROM `courses`
+JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
+JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+WHERE `course_teacher`.`teacher_id` = 44;
