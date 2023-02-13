@@ -79,7 +79,7 @@ JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
 JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 WHERE `departments`.`id` = 5;
 
-BONUS SEVENTH query
+BONUS SEVENTH query - CHECKED and WORKS
 
 SELECT COUNT(`exam_student`.`exam_id`), `courses`.`name`, `exams`.`course_id`, `students`.`name`, `students`.`surname`
 FROM `exam_student`
