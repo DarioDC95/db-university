@@ -2,8 +2,14 @@ SECOND ROUND OF QUERIES:
 
 FIRST SECTION - "GROUP BY"
 
-PRIMA query
+FIRST query
 
 SELECT COUNT(`id`), YEAR(`enrolment_date`)
 FROM `students` 
 GROUP BY YEAR(`enrolment_date`);
+
+SECOND query
+
+SELECT COUNT(`id`), `office_address`
+FROM `teachers` 
+GROUP BY `teachers`.`office_address`;
