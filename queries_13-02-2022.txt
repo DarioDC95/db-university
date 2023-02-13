@@ -63,11 +63,11 @@ ORDER BY `students`.`surname`, `students`.`name`;
 
 FIFTH query
 
-SELECT `degrees`.*, `courses`.*, `teachers`.*
+SELECT `degrees`.*, `courses`.`name` AS name_course, `courses`.`id` AS id_course, `courses`.`description` AS courses_description, `courses`.`period` AS courses_period, `courses`.`year` AS courses_year, `courses`.`cfu` AS couerse_cfu, `teachers`.`name` AS name_teachers, `teachers`.`surname` AS surname_teachers, `teachers`.`phone` AS teachers_phone, `teachers`.`email` AS teachers_email, `teachers`.`office_address` AS teachers_officeAddress
 FROM `degrees` 
 JOIN `courses` ON `courses`.`degree_id` = `degrees`.`id`
 JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
-JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`;
 
 SIXTH query
 
