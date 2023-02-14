@@ -81,11 +81,10 @@ WHERE `departments`.`id` = 5;
 
 BONUS SEVENTH query - CHECKED and WORKS
 
-SELECT COUNT(`exam_student`.`exam_id`), `courses`.`name`, `exams`.`course_id`, `students`.`name`, `students`.`surname`
+SELECT COUNT(`exam_student`.`exam_id`), `courses`.`name`, `exams`.`course_id`, `students`.`name` AS `student_name`, `students`.`surname`, MAX(`exam_student`.`vote`)
 FROM `exam_student`
 JOIN `exams` ON `exams`.`id` = `exam_student`.`exam_id`
 JOIN `courses` ON `courses`.`id` = `exams`.`course_id`
 JOIN `students` ON `students`.`id` = `exam_student`.`student_id`
-WHERE `exam_student`.`vote` < 18
-GROUP BY `exams`.`course_id`, `students`.`name`, `students`.`surname`
-ORDER BY `students`.`name`, `students`.`surname`;
+GROUP BY `exams`.`course_id`, `students`.`name`, `students`.`surname`  
+ORDER BY `student_name`, `students`.`surname` ASC
